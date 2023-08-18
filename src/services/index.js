@@ -1,3 +1,1 @@
-module.exports = {
-    Cityservice = require('./city-service')
-}
+module.exports = { CityService: require("./city-service") };

@@ -4,7 +4,7 @@ class CityService {
   constructor() {
     this.cityRepository = new CityRepository();
   }
-  async createCity() {
+  async createCity(data) {
     try {
       const city = await this.cityRepository.createCity(data);
       return city;
@@ -13,7 +13,7 @@ class CityService {
       throw { error };
     }
   }
-  async deleteCity() {
+  async deleteCity(cityId) {
     try {
       const response = await this.cityRepository.deleteCity(cityId);
       return response;
